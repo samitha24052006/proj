@@ -1,55 +1,51 @@
-public class Request {
-    
-}
 package model;
+
+import java.util.Date;
 
 public class Request {
 
     private int id;
-    private String requesterEmail;
-    private String role;
+    private int studentId;
+    private int teamId;   // if individual student = 0
     private String component;
-    private int quantity;
-    private String status;
+    private String status; // Pending, Approved, Rejected
+    private Date requestDate;
+
+    private int staffId; // assigned
 
     public Request() {}
 
-    public Request(int id, String requesterEmail, String role, String component, int quantity, String status) {
+    public Request(int id, int studentId, int teamId,
+                   String component, String status,
+                   Date requestDate, int staffId) {
+
         this.id = id;
-        this.requesterEmail = requesterEmail;
-        this.role = role;
+        this.studentId = studentId;
+        this.teamId = teamId;
         this.component = component;
-        this.quantity = quantity;
         this.status = status;
+        this.requestDate = requestDate;
+        this.staffId = staffId;
     }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
-    public String getRequesterEmail() { return requesterEmail; }
-    public void setRequesterEmail(String requesterEmail) { this.requesterEmail = requesterEmail; }
+    public int getStudentId() { return studentId; }
+    public void setStudentId(int studentId) { this.studentId = studentId; }
 
-    public String getRole() { return role; }
-    public void setRole(String role) { this.role = role; }
+    public int getTeamId() { return teamId; }
+    public void setTeamId(int teamId) { this.teamId = teamId; }
 
     public String getComponent() { return component; }
     public void setComponent(String component) { this.component = component; }
 
-    public int getQuantity() { return quantity; }
-    public void setQuantity(int quantity) { this.quantity = quantity; }
-
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
 
-    @Override
-    public String toString() {
-        return "Request{" +
-                "id=" + id +
-                ", requesterEmail='" + requesterEmail + '\'' +
-                ", role='" + role + '\'' +
-                ", component='" + component + '\'' +
-                ", quantity=" + quantity +
-                ", status='" + status + '\'' +
-                '}';
-    }
+    public Date getRequestDate() { return requestDate; }
+    public void setRequestDate(Date requestDate) { this.requestDate = requestDate; }
+
+    public int getStaffId() { return staffId; }
+    public void setStaffId(int staffId) { this.staffId = staffId; }
 }

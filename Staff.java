@@ -1,6 +1,3 @@
-public class Staff {
-    
-}
 package model;
 
 public class Staff {
@@ -30,13 +27,4 @@ public class Staff {
 
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
-
-    @Override
-    public String toString() {
-        return "Staff{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
 }
