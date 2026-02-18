@@ -1,0 +1,26 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5 col-md-4">
+    <h3 class="text-center">Student Login</h3>
+    <form action="LoginServlet" method="post">
+        <input type="hidden" name="role" value="student">
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" required>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">Login</button>
+        <p class="mt-3 text-center"><a href="studentRegister.jsp">Register as Student</a></p>
+    </form>
+</div>
+</body>
+</html>
