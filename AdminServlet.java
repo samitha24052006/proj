@@ -1,3 +1,6 @@
+public class AdminServlet {
+    
+}
 package controller;
 
 import dao.AdminDAO;
